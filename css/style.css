@@ -2095,4 +2095,11 @@ span.error {
 .gsap-reveal-img .reveal-wrap .reveal-content .portfolio-item-content h3 {
   margin-bottom: 10px;
 }
+.eventcard :hover{
+  transform: scale(1.08);
+}
+
+.eventcardbody :hover{
+  transform: scale(1);
+}
 
