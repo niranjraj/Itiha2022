@@ -92,13 +92,41 @@
       <!-- END nav -->
 
 
-      <div class="cover-v1 jarallax" style="width:100%; height: 100vh;" id="home-section">
-        <video src="videos/shortLogo.mp4" autoplay muted style="width:100%;" ><video></video>
+      <div class="cover-v1 jarallax" style="width:100vw; height: 100vh;" id="home-section">
+        <video class="jarallax-img" src="videos/shortLogo.mp4" autoplay muted  style="width:100vw; object-fit:cover; height: 100vh; background-attachment: fixed;" ><video></video>
+ 
+
       </div>
       <!-- END .cover-v1 -->
+      <div class="cover-v1 jarallax" style="width:100vw; height: 100vh; overflow:hidden;" id="home-section">
+       
+        <div class="countdown-wrapper d-flex flex-column align-items-center justify-content-center text-align-center" style="z-index:100;">
+          <h1 class="countdown-text">Itiha <span>Countdown</span></h1>
+          <div id="countdown" class="countdown d-flex">
+          <div class="time">
+          <h2 id="days">00</h2>
+          <small>Days</small>
+          </div>
+          <div class="time">
+            <h2 id="hours">00</h2>
+            <small>Hours</small>
+          </div>
+          <div class="time">
+            <h2 id="minutes">00</h2>
+            <small>Minutes</small>
+          </div>
+            <div class="time">
+            <h2 id="seconds">00</h2>
+            <small>Seconds</small>
+            </div>
+        </div>
+        
+        </div>
 
+      </div>
 
-   
+<br> 
+
 
        <!--<div class="unslate_co--section" id="services-section">
         <div class="container">
@@ -113,7 +141,7 @@
             <div class="item web branding col-sm-6 col-md-6 col-lg-6 isotope-mb-2">
               <a  class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
                 <div class="card gsap-reveal" style="width:30rem; border:none; background-color:#D63447;">
-                  <a href="technicalevents.html" target="_blank">
+                  <a href="technicalevents.html" target="_self">
                   <div class="card-body">
                     <h5 class="card-title" style="text-align: center; color: whitesmoke;">Technical Events</h5>
                   
@@ -249,30 +277,44 @@
       </div> 
       <!-- END testimonial -->
 
-      <!-- <div class="unslate_co--section" id="portfolio-section">
+      <!-- <div class="video-carousel-container container d-flex align-items-center justify-content-center">
+        <div class="video-carousel-wrapper vid-slide-1">
+          <div class="video-carousel-content">
+            <h3>slide 1</h3>
+          </div>
+
+        </div>
+        <div class="video-carousel-wrapper vid-slide-2">
+          <div class="video-carousel-content">
+            <h3>slide 2</h3>
+          </div>
+
+        </div>
+        <div class="video-carousel-wrapper vid-slide-3">
+          <div class="video-carousel-content">
+            <h3>slide 3</h3>
+          </div>
+
+        </div>
+
+      </div> -->
+
+
+      <div class="unslate_co--section" id="portfolio-section">
         <div class="container">
         
           <div class="relative"><div class="loader-portfolio-wrap"><div class="loader-portfolio"></div></div> </div>
           <div id="portfolio-single-holder"></div>
 
           <div class="portfolio-wrapper">
-
-            <div class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter">
-              <h2 class="mr-auto heading-h2"><span class="gsap-reveal">Gallery</span></h2>
-
-              <!-- <a href="#" class="text-white js-filter d-inline-block d-lg-none">Filter</a>
-              
-              <div class="filter-wrap">
-                <div class="filter ml-auto" id="filters">
-                  <a href="#" class="active" data-filter="*">All</a>
-                  <a href="#" data-filter=".web">Web</a>
-                  <a href="#" data-filter=".branding">Branding</a>
-                  <a href="#" data-filter=".illustration">Illustration</a>
-                  <a href="#" data-filter=".packaging">Packaging</a>
-                </div>
-              </div> 
+            <div class="section-heading-wrap text-center mb-5">
+              <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Gallery</span></h2>
+              <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
             </div>
 
+        
+
+      
  
             
             <div id="posts" class="row gutter-isotope-item">
@@ -383,9 +425,7 @@
               <br>Made with <i class="icon-heart"
                 aria-hidden="true"></i> by <a href="https://deepikasr.me" target="_blank" !important  style="text-decoration: underline; color:#D63447" >Deepika SR</a>
               <br> Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
+           
             
             
             </p>
@@ -402,6 +442,17 @@
     <div class="site-loader-wrap">
       <div class="site-loader"></div>
     </div>
+
+
+    <script>
+     let box=document.querySelectorAll('.video-carousel-wrapper');
+box.forEach (popup => popup.addEventListener('click', () => {
+popup.classList.toggle('active')
+}))
+
+
+      
+    </script>
 
     <script src="scripts-dist.js"></script>
     <script src="main.js"></script>

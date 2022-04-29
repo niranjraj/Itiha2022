@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo:400|Raleway:300,400,700&display=swap');
 
-$font-family-sans-serif: 'Raleway', sans-serif;
+$font-family-sans-serif: 'Poppins', sans-serif;
 $font-family-sans-serif-secondary: 'Arimo', sans-serif;
 
 body {
@@ -9,6 +9,7 @@ body {
 	font-size: 16px;
 	line-height: 30px;
 	font-weight: 300;
+	overflow-x: hidden;
 	position: relative;
 	&:before {
 		content: "";
@@ -33,15 +34,15 @@ body {
 }
 
 body, .unslate_co--site-inner {
-	background: $black;
+	background: linear-gradient(#030003,#140014);
 }
 
 ::-moz-selection { 
-	background: $black;
+	background: linear-gradient(#030003,#140014);
 	color: $white;
 }
 ::selection { 
-	background: $black;
+	background:linear-gradient(#030003,#140014);
 	color: $white;
 }
 a {
