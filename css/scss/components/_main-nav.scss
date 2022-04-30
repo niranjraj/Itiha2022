@@ -55,13 +55,13 @@
 					content: "";
 					position: absolute;
 					height: 1px;
-					background: $white;
+					background: sandybrown;
 					bottom: 0;
 					width: 0%;
 					transition: .2s width ease-in-out;
 				}
 				&:hover {
-					color: $white;
+					color: sandybrown;
 					&:before {
 						width: calc(100% - 14px);
 					}
@@ -69,7 +69,7 @@
 				&.active {
 					position: relative;
 					&:before {
-						color: $white;
+						color: sandybrown;
 						width: calc(100% - 14px);
 					}
 				}
@@ -300,7 +300,7 @@
 			}
 		}
 		.unslate_co--site-logo {
-			color: $black;
+			color:sandybrown;
 		}
 		.site-nav-ul, .site-nav-ul-none-onepage {
 			text-align: center;
@@ -317,7 +317,7 @@
 					display: block;
 					color: $black;
 					&:hover {
-						color: $primary;
+						color: sandybrown;
 					}
 					&:before {
 						background: $white;

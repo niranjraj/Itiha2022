@@ -371,6 +371,12 @@ var  updateCountdown= function(){
 setInterval(updateCountdown,1000);
 
 
+
+
+
+
+
+
 var counter = function() {
 	
 	$('.section-counter').waypoint( function( direction ) {
@@ -513,6 +519,7 @@ $(document).ajaxStop(function(){
 });
 
 var loadPortfolioSinglePage = function(id, href) {
+
 	$.ajax({
 		url: href,
 		type: 'GET',
