@@ -2,7 +2,19 @@
 
 $font-family-sans-serif: 'Poppins', sans-serif;
 $font-family-sans-serif-secondary: 'Arimo', sans-serif;
-
+html{
+	scrollbar-color: sandybrown  #140014;
+	scrollbar-width: thin;
+}
+html::-webkit-scrollbar {
+	width: 5px;
+  }
+  html::-webkit-scrollbar-thumb {
+	background-color: sandybrown;
+  }
+  html::-webkit-scrollbar-track {
+	background-color: #140014;
+  }
 body {
 	font-family: $font-family-sans-serif;
 	color: $white;
@@ -54,7 +66,7 @@ a {
 
 
 .unslate_co--site-inner {
-	margin-bottom: 400px;
+	margin-bottom: 300px;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -74,9 +86,9 @@ a {
 	right: 0;
   bottom: 0px;
   z-index: -1;
-  height: 400px;
+  height: 300px;
   @include media-breakpoint-down(md) {
-  	height: auto!important;
+  	
   	position: relative!important;
   }
 
