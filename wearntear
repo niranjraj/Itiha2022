@@ -26,46 +26,40 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
+  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
 
-  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200" background="">
-<div class="unslate_co--section id="services-section">
+<div class="unslate_co--section" id="services-section">
     <div class="container">
 <div>
-    <div class="section-heading-wrap text-center mb-5">
-        <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Maze Runner</span></h2>
-        <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-        <br>
-        <p>
-            Maze Runner is a technical event in which a fully automatic robot either line follower sensor or optical sensor may be used. The maze who will take minimum time to come out will be the winner.<br>
+      <div class="section-heading-wrap text-center mb-5">
+        <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Wear N Tear</span></h2>
+        <p>Get ready with the most exciting and funniest costumes. Team up with your buddies and entertain the audience. Make them laugh out loud.
         </p>
+        <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
       </div>
      
-
+      
       <div class="d-grid gap-2 d-md-block text-center">
-        <a  class="btn btn-primary btn-sm" href = "https://surveyheart.com/form/625edd047f7bc8617979d221" style ="text-transform: none; text-decoration: none;">Register</a>
+        <a  class="btn btn-primary btn-sm" href = "https://surveyheart.com/form/625e1841858afe1fa8de7d25" style ="text-transform: none; text-decoration: none;">Register</a>
       </div>
 <br>
       <p style="font-weight: bold; text-align: center;">
-        Team : Maximum of 2 members<br>
-        Registration fee: 200 per person<br>
-        Prize<br>
-            1st Prize:  3500<br>
-2nd Prize:  2000<br>
-       </p>    
+        Team: 3-4 participants<br>
+        Registration fee: 100 per person<br>
+        Prize: Rs 5000 cash prize and certification<br>
+        
+       </p> 
+
+    
+       RULES:<br>
+       •	Only a team of 3 to 4 members is allowed to participate.<br>
+       •	All the necessary items will be provided.<br>
+       •	The maximum load the structure can bear before failure and<br>
+       •	Minimum amount of materials used is chosen.<br>
+       
+     
 <br>
-Rules:<br>
-
-● 	A team consist maximum of 2 members. Students from different institutes may form a group.<br>
-● 	Each team should bring their own robot.<br>
-
-● 	Robot should be completely automatic, external control should not be allowed. If any. negative points (-30 points) will be earn by the particular group.<br>
-
-● 	One trial is allowed.<br>
-
-● 	Decision of the judge will be final.<br>
-
-● 	Minimum of 3 teams should be there otherwise the event will be cancelled.
-
+     
 </div>
     
 
