@@ -361,6 +361,9 @@
 	left: 0;
 	transform: translateX(-100%);
 	transition: 1s transform cubic-bezier(.23,1,.32,1);
+	@include media-breakpoint-down(xs) {
+		width:100vw;
+	}
 
 	.offcanvas & {
 		transform: translateX(0%);

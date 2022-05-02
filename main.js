@@ -13,11 +13,9 @@ jQuery(function($) {
 	mobileToggleClick();
 	onePageNavigation();
 	siteIstotope();
-	portfolioItemClick();
-	owlCarouselPlugin();
 	floatingLabel();
 	scrollWindow();
-	counter();
+
 	jarallaxPlugin();
 	contactForm();
 	stickyFillPlugin();
@@ -193,90 +191,7 @@ var siteMenuClone = function() {
 	
 // }
 
-var owlCarouselPlugin = function() {
 
-	$('.testimonial-slider').owlCarousel({
-    center: false,
-    items: 1,
-    loop: true,
-    stagePadding: 20,
-  	margin: 10,
-    smartSpeed: 2000,
-    autoplay: true,
-    autoplayHoverPause: true,
-    dots: true,
-    nav: true,
-    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">'],
-
-    responsive:{
-        400:{
-          stagePadding: 20,
-  				margin: 10,
-        },
-        600:{
-          stagePadding: 100,
-  				margin: 50,
-        }
-    }
-	});
-	owlSingleSlider();
-
-	if ( $('.logo-slider').length ) {
-
-		$('.logo-slider').owlCarousel({
-			center: false,
-	    loop: true,
-	    stagePadding: 0,
-	    margin: 0,
-	    smartSpeed: 1000,
-	    autoplay: true,
-	    autoplayHoverPause: true,
-	    dots: false,
-	    nav: false,
-	    responsive:{
-		    400:{
-		      items: 2
-		    },
-		    768:{
-		    	items: 3
-		    },
-		    1000:{
-		    	items: 5
-		    }
-	    }
-	   });
-	}
-
-};
-
-var owlSingleSlider = function () {
-	if ( $( '.single-slider' ).length ) {
-		$('.single-slider').owlCarousel({
-	    center: false,
-	    items: 1,
-	    loop: true,
-	    stagePadding: 0,
-	    margin: 0,
-	    smartSpeed: 1500,
-	    autoplay: true,
-	    autoplayHoverPause: true,
-	    dots: true,
-	    nav: true,
-	    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">'],
-
-	    responsive:{
-	      400:{
-	        stagePadding: 0,
-					margin: 0,
-	      },
-	      600:{
-	        stagePadding: 0,
-					margin: 0,
-	      }
-	    }
-		});
-	}
-}
 
 var floatingLabel = function () {
 	$('.form-control').on('input', function() {
@@ -348,7 +263,7 @@ const hours = document.getElementById('hours');
 const minutes = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
 const eventTime = new Date('May 19 2022 10:00:00');
-console.log(days)
+
  
 
 var  updateCountdown= function(){
@@ -376,34 +291,6 @@ setInterval(updateCountdown,1000);
 
 
 
-
-var counter = function() {
-	
-	$('.section-counter').waypoint( function( direction ) {
-
-		if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-			$(this.element).find('.number-counter').each(function(){
-				var $this = $(this),
-					num = $this.data('number');
-				$this.animateNumber(
-				  {
-				    number: num,
-				    numberStep: comma_separator_number_step
-				  }, 
-				  {
-				  	easing: 'swing',
-    				duration: 3000
-				  }
-				);
-			});
-			
-		}
-
-	} , { offset: '95%' } );
-
-};
 
 
 var mobileToggleClick = function() {
@@ -468,93 +355,8 @@ var onePageNavigation = function() {
 };
 
 
-// load ajax page
-var portfolioItemClick = function() {
-	$('.ajax-load-page').on('click', function(e) {
-		
-		var id = $(this).data('id'),
-			href = $(this).attr('href');
 
-		if ( $('#portfolio-single-holder > div').length ) {
-			$('#portfolio-single-holder > div').remove();
-		} 
 
-		TweenMax.to('.loader-portfolio-wrap', 1, { top: '-50px', autoAlpha: 1, display: 'block', ease: Power4.easeOut });
-
-		$('html, body').animate({
-    	scrollTop: $('#portfolio-section').offset().top - 50
-		}, 700, 'easeInOutExpo', function() {
-		});
-		
-		setTimeout(function(){
-			loadPortfolioSinglePage(id, href);
-		}, 100);
-
-		e.preventDefault();
-
-	});
-
-	// Close
-	$('body').on('click', '.js-close-portfolio', function() {
-
-		setTimeout(function(){
-			$('html, body').animate({
-	    	scrollTop: $('#portfolio-section').offset().top - 50
-			}, 700, 'easeInOutExpo');
-		}, 200);
-
-		TweenMax.set('.portfolio-wrapper', { visibility: 'visible', height: 'auto' });
-		TweenMax.to('.portfolio-single-inner', 1, { marginTop: '50px', opacity: 0,  display: 'none', onComplete() {
-			TweenMax.to('.portfolio-wrapper', 1, { marginTop: '0px', autoAlpha: 1, position: 'relative' });
-
-		} });
-		
-	});
-};
-
-$(document).ajaxStop(function(){
-	setTimeout(function(){
-		TweenMax.to('.loader-portfolio-wrap', 1, { top: '0px', autoAlpha: 0, ease: Power4.easeOut });	
-	}, 400);
-});
-
-var loadPortfolioSinglePage = function(id, href) {
-
-	$.ajax({
-		url: href,
-		type: 'GET',
-		success: function(html) {
-
-			TweenMax.to('.portfolio-wrapper', 1, { marginTop: '50px', autoAlpha: 0, visibility: 'hidden', onComplete() {
-				TweenMax.set('.portfolio-wrapper', { height: 0 });
-			} })
-
-			var pSingleHolder = $('#portfolio-single-holder');
-	    	
-			var getHTMLContent = $(html).find('.portfolio-single-wrap').html();
-
-			pSingleHolder.append(
-				'<div id="portfolio-single-'+id+
-				'" class="portfolio-single-inner"><span class="unslate_co--close-portfolio js-close-portfolio d-flex align-items-center"><span class="close-portfolio-label">Back to Portfolio</span><span class="icon-close2 wrap-icon-close"></span></span>' + getHTMLContent + '</div>'
-			);
-
-			setTimeout(function() {
-				owlSingleSlider();
-			}, 10);
-
-			setTimeout(function() {
-				TweenMax.set('.portfolio-single-inner', { marginTop: '100px', autoAlpha: 0, display: 'none' });
-				TweenMax.to('.portfolio-single-inner', .5, { marginTop: '0px', autoAlpha: 1, display: 'block', onComplete() {
-
-					TweenMax.to('.loader-portfolio-wrap', 1, { top: '0px', autoAlpha: 0, ease: Power4.easeOut });	
-				} });
-			}, 700 );
-		}
-	});
-
-	return false;
-
-};
 
 var jarallaxPlugin = function() {
 	$('.jarallax').jarallax({
@@ -638,39 +440,69 @@ var stickyFillPlugin = function() {
 var animateReveal = function() {
 
 
-	var controller = new ScrollMagic.Controller();
-	
-	var greveal = $('.gsap-reveal');
 
-	// gsap reveal
-	$('.gsap-reveal').each(function() {
-		$(this).append('<span class="cover"></span>');
-	});
-	if ( greveal.length ) {
-		var revealNum = 0;
-		greveal.each(function() {
-			var cover = $(this).find('.cover');
+	// var controller = new ScrollMagic.Controller();
+	// var sectionHeading = $('.section-heading');
 
-			var tl = new TimelineMax();
 
-			setTimeout(function() {
-				tl
-					.fromTo(cover, 2, { skewX: 0 }, { xPercent: 101, transformOrigin: "0% 100%", ease:Expo.easeInOut })
-			}, revealNum * 0);
+	// if ( sectionHeading.length ) {
+
+	// sectionHeading.each(function() {
+
+	// 		var sectionData=$(this);
+	// 		sectionData[0].dataset.emergence="visible"
 			
-			var scene = new ScrollMagic.Scene({
-				triggerElement: this,
-				duration: "0%",
-				reverse: false,
-				offset: "-300%",
-			})
-			.setTween(tl)
-			.addTo(controller);
+	// 		// sectionData.dataset.emergence="visible"
 
-			revealNum++;
+	// 		// var tl2 = new TimelineMax();
 
-		});
-	}
+	// 	;
+	// })
+	
+
+
+	// 	var scene =new ScrollMagic.Scene({
+	// 	triggerElement: this,
+	// 	duration: "0%", // the scene should last for a scroll distance of 100px
+	// 	offset:-50 ,
+	// 	reverse: false,
+		
+	// })
+	// 	.setPin('.section-heading') // pins the element for the the scene's duration
+	// 	.addTo(controller); 
+	// }
+	
+	// var greveal = $('.gsap-reveal');
+
+	// // gsap reveal
+	// $('.gsap-reveal').each(function() {
+	// 	$(this).append('<span class="cover"></span>');
+	// });
+	// if ( greveal.length ) {
+	// 	var revealNum = 0;
+	// 	greveal.each(function() {
+	// 		var cover = $(this).find('.cover');
+
+	// 		var tl = new TimelineMax();
+
+	// 		setTimeout(function() {
+	// 			tl
+	// 				.fromTo(cover, 2, { skewX: 0 }, { xPercent: 101, transformOrigin: "0% 100%", ease:Expo.easeInOut })
+	// 		}, revealNum * 0);
+			
+	// 		var scene = new ScrollMagic.Scene({
+	// 			triggerElement: this,
+	// 			duration: "0%",
+	// 			reverse: false,
+	// 			offset: "-300%",
+	// 		})
+	// 		.setTween(tl)
+	// 		.addTo(controller);
+
+	// 		revealNum++;
+
+	// 	});
+	// }
 
 	// gsap reveal hero
 	$('.gsap-reveal-hero').each(function() {
