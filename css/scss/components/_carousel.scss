@@ -1,9 +1,9 @@
 .video-carousel-container{
-    background:white;
+
     position:relative;
     z-index: 10;
     height:500px;
-
+  
     & .video-carousel-wrapper{
         width:100%;
         height:100%;
@@ -14,20 +14,28 @@
         position:absolute;
         transition:1s all linear;
         &:hover{
-           z-index:1000;  
+           z-index:1000; 
+           
+           
         }
 
         & .video-carousel-content{
             z-index:20;
             opacity: 0;
             transition:1s;
-
+          
+          
 
         }
         & .video-carousel-content h3 {
-           color:#fff;
+            color: sandybrown;
+            text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.5em violet;
            font-size:7vw;
            font-family: "Yesteryear";
+           @include media-breakpoint-down(sm) {
+            font-size:15vw;
+            
+        }
 
         }
 
@@ -38,10 +46,15 @@
             width:100%;
             height:100%;
             object-fit: cover;
+          
+
+          
 
             &:focus{
                 outline: none;
             }
+          
+
         }
 
 
@@ -52,6 +65,7 @@
     & .vid-slide-1{ 
        
         clip-path: polygon(0 0,33% 0,33% 100%,0% 100%);
+        
 
      
         
@@ -71,6 +85,7 @@
 
     & .video-carousel-container{
         z-index: 10;
+        
     }
 }
 

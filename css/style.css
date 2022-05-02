@@ -58,7 +58,8 @@ body:before {
   right: 0;
   bottom: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#030003), to(#140014));
+  background: linear-gradient(#030003, #140014);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: .3s all ease;
@@ -563,6 +564,12 @@ a, a:hover {
   transition: 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
   transition: 1s transform cubic-bezier(0.23, 1, 0.32, 1);
   transition: 1s transform cubic-bezier(0.23, 1, 0.32, 1), 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (max-width: 575.98px) {
+  .unslate_co--site-mobile-menu {
+    width: 100vw;
+  }
 }
 
 .offcanvas .unslate_co--site-mobile-menu {
@@ -1141,6 +1148,12 @@ a, a:hover {
   }
 }
 
+@media (max-width: 575.98px) {
+  .countdown-wrapper .time {
+    margin: 10px;
+  }
+}
+
 .countdown-wrapper .time h2 {
   font-weight: bold;
   font-family: "Poppins";
@@ -1234,6 +1247,10 @@ a, a:hover {
   }
 }
 
+.button-container {
+  height: 300px;
+}
+
 @media (max-width: 767.98px) {
   .button-container {
     height: 100%;
@@ -1255,7 +1272,7 @@ a, a:hover {
 .section-heading {
   background-image: url(/videos/giphy.webp);
   background-size: cover;
-  background-position: left center;
+  background-position: center left;
   color: transparent;
   background-clip: text;
   -moz-background-clip: text;
@@ -1265,14 +1282,27 @@ a, a:hover {
   margin: 0.8em 0;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .section-heading {
-    font-size: 4rem;
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .section-heading {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 7rem;
   }
 }
 
 .unslate_co--section {
   padding: 3.5rem 0;
+  margin-bottom: 2em;
 }
 
 @media (max-width: 767.98px) {
@@ -1754,6 +1784,7 @@ figure.dotted-bg:before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
@@ -1766,16 +1797,19 @@ figure.dotted-bg:before {
   letter-spacing: .1rem;
   font-weight: 900;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 192, 203, 0.5);
 }
 
 .contact-info-v1 .contact-info-val {
   font-size: 20px;
-  color: #fff;
+  color: sandybrown;
+  text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.5em violet;
 }
 
-.contact-info-v1 .contact-info-block {
-  height: 2em;
+@media (max-width: 767.98px) {
+  .contact-info-v1 .contact-info-blocks {
+    margin-bottom: 2.4em;
+  }
 }
 
 .portfolio-single-inner .heading-portfolio-single-h2 {
@@ -2257,7 +2291,6 @@ span.error {
 }
 
 .video-carousel-container {
-  background: white;
   position: relative;
   z-index: 10;
   height: 500px;
@@ -2293,9 +2326,16 @@ span.error {
 }
 
 .video-carousel-container .video-carousel-wrapper .video-carousel-content h3 {
-  color: #fff;
+  color: sandybrown;
+  text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.5em violet;
   font-size: 7vw;
   font-family: "Yesteryear";
+}
+
+@media (max-width: 767.98px) {
+  .video-carousel-container .video-carousel-wrapper .video-carousel-content h3 {
+    font-size: 15vw;
+  }
 }
 
 .video-carousel-container .video-carousel-wrapper video {
