@@ -1274,7 +1274,7 @@ a, a:hover {
   background-position: center left;
 }
 .section-heading {
-  background-image: url(/videos/giphy.webp);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/itiha-2022.appspot.com/o/videos%2Fgiphy.webp?alt=media&token=5cfa9020-0655-4d9e-a777-8cb85cef48c8);
   background-size: cover;
   background-position: center left;
   color: transparent;
@@ -1343,28 +1343,6 @@ a, a:hover {
 
 .relative {
   position: relative;
-}
-
-figure.dotted-bg {
-  position: relative;
-}
-
-figure.dotted-bg:before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  right: -50px;
-  width: 268px;
-  height: 224px;
-  background-image: url("../images/dotted_light.png");
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 991.98px) {
-  figure.dotted-bg:before {
-    right: 0px;
-  }
 }
 
 .gutter-v1 {
