@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/itiharie/public_html/
-    - /bin/cp  * $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH
