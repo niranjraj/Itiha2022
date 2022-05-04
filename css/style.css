@@ -1270,7 +1270,7 @@ a, a:hover {
 }
 
 .section-heading {
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/itiha-2022.appspot.com/o/videos%2Fgiphy.webp?alt=media&token=5cfa9020-0655-4d9e-a777-8cb85cef48c8);
+  background-image: url(/images/giphy.webp);
   background-size: cover;
   background-position: center left;
   color: transparent;
