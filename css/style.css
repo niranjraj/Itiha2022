@@ -631,7 +631,7 @@ a, a:hover {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  color: #000;
+  color: #fff;
 }
 
 .unslate_co--site-mobile-menu ul a:hover, .unslate_co--site-mobile-menu ul li a:hover {
@@ -1268,7 +1268,11 @@ a, a:hover {
             align-items: center;
   }
 }
-
+.unslate_co--site-mobile-menu{
+  background-image: url(/images/Android\ Small\ -\ 1.png);
+  background-size: cover;
+  background-position: center left;
+}
 .section-heading {
   background-image: url(/images/giphy.webp);
   background-size: cover;
