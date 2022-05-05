@@ -551,7 +551,8 @@ a, a:hover {
   position: fixed;
   z-index: 1009;
   height: 100vh;
-  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1F001E), to(#140014));
+  background: linear-gradient(#1F001E, #140014);
   width: 280px;
   overflow: auto;
   padding-top: 30px;
@@ -575,6 +576,10 @@ a, a:hover {
 .offcanvas .unslate_co--site-mobile-menu {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+.unslate_co--site-mobile-menu .site-mobile-inner {
+  padding-top: 4em;
 }
 
 .unslate_co--site-mobile-menu .close-wrap {
@@ -604,7 +609,7 @@ a, a:hover {
 .unslate_co--site-mobile-menu .close-wrap a .close-times .bar1, .unslate_co--site-mobile-menu .close-wrap a .close-times .bar2 {
   width: 2px;
   height: 20px;
-  background: #000;
+  background: sandybrown;
   position: absolute;
 }
 
@@ -631,7 +636,8 @@ a, a:hover {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  color: #fff;
+  color: sandybrown;
+  text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.5em violet;
 }
 
 .unslate_co--site-mobile-menu ul a:hover, .unslate_co--site-mobile-menu ul li a:hover {
@@ -1268,11 +1274,7 @@ a, a:hover {
             align-items: center;
   }
 }
-.unslate_co--site-mobile-menu{
-  background-image: url(/images/Android\ Small\ -\ 1.png);
-  background-size: cover;
-  background-position: center left;
-}
+
 .section-heading {
   background-image: url(/images/giphy.webp);
   background-size: cover;
