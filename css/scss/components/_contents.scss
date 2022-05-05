@@ -170,7 +170,69 @@
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
+.about-content{
+	
+
+	display:flex;
+	justify-content: space-between;
+	justify-content: space-evenly;
+    align-items: center;
+	color:sandybrown;
+
+
+	& p{
+		width:500px;
+		padding:2em 4em;
+		text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.65em violet;
+	}
+	.about-title{
+
+		font-size:4.8rem;
+		position: relative;
+		background-image: url(/images/whiteItiha.png);
+		-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+		width:500px;
+		text-align: center;
+
+	
+		& span{
+			font-family:'Alfa Slab One', cursive;
+		
+			position: relative;
+			display: inline-block;
+			text-transform: uppercase;
+			animation: waviy 1s infinite;
+			animation-delay: calc(.1s * var(--i));
+		}
+
+	}
+	
+
+	&-right{
+		margin-bottom:9em;
+
+	}
+
+}
+
+
+@keyframes waviy {
+	0%,40%,100% {
+	  transform: translateY(0)
+	}
+	20% {
+	  transform: translateY(-20px)
+	}
+  }
+
+.contact-title{
+	font-size:2rem;
+	font-weight: 500;
+	color:sandybrown;
+	text-shadow: 0.02em 0.02em 0 Brown;
+}
 
 
 

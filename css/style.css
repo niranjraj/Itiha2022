@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo:400|Raleway:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 @font-face {
   font-family: "Poppins";
   src: url("../../../fonts/Poppins/Poppins-Medium.ttf");
@@ -1304,6 +1305,85 @@ a, a:hover {
   .section-heading {
     font-size: 7rem;
   }
+}
+
+.about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: sandybrown;
+}
+
+.about-content p {
+  width: 500px;
+  padding: 2em 4em;
+  text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.65em violet;
+}
+
+.about-content .about-title {
+  font-size: 4.8rem;
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  width: 500px;
+  text-align: center;
+}
+
+.about-content .about-title img {
+  -webkit-transform: perspective(500px) rotateY(-42deg);
+          transform: perspective(500px) rotateY(-42deg);
+}
+
+.about-content .about-title span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  -webkit-animation: waviy 1s infinite;
+          animation: waviy 1s infinite;
+  -webkit-animation-delay: calc(.1s * var(--i));
+          animation-delay: calc(.1s * var(--i));
+}
+
+.about-content-right {
+  margin-bottom: 9em;
+}
+
+@-webkit-keyframes waviy {
+  0%, 40%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes waviy {
+  0%, 40%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: sandybrown;
+  text-shadow: 0.02em 0.02em 0 Brown;
 }
 
 .unslate_co--section {
