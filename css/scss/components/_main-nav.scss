@@ -352,7 +352,7 @@
 	position: fixed;
 	z-index: 1009;
 	height: 100vh;
-	background: $white;
+	background: linear-gradient(#1F001E,#140014);
 	width: 280px;
 	overflow: auto;
 	padding-top: 30px;
@@ -368,6 +368,12 @@
 	.offcanvas & {
 		transform: translateX(0%);
 	}
+
+	.site-mobile-inner{
+		padding-top:4em;
+	}
+
+	
 
 	.close-wrap {
 		margin-right: 20px;
@@ -388,7 +394,7 @@
 				.bar1, .bar2 {
 					width: 2px;
 					height: 20px;
-					background: $black;
+					background: sandybrown;
 					position: absolute;
 				} 
 				.bar1 {
@@ -412,7 +418,8 @@
 				padding-bottom: 10px;
 				padding-left: 20px;
 				padding-right: 20px;
-				color: $black;
+				color: sandybrown;
+				text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.5em violet;
 				&:hover {
 					color: $primary;
 				}
