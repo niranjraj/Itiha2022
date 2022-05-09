@@ -2443,3 +2443,9 @@ span.error {
 .video-carousel-wrapper.active .video-carousel-content {
   opacity: 1;
 }
+@media screen and (max-width: 400px){
+  .nearest{
+    font-size: 35px;
+  }
+}
+  
