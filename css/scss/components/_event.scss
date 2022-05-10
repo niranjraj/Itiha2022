@@ -1,0 +1,30 @@
+.eventcard-wrapper {
+    display: flex;
+    padding: 2em;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1em;
+}
+
+.eventcard {
+    margin: 1em;
+}
+
+.eventcardbody {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
