@@ -2448,4 +2448,10 @@ span.error {
     font-size: 35px;
   }
 }
+  @media (max-width: 500px){
+     body{
+       overflow-x: hidden;
+  }
+}  
+
   
