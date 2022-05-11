@@ -1345,7 +1345,7 @@ a, a:hover {
 }
 
 .about-content .about-title {
-  font-size: 4.8rem;
+  font-size: 10vh;
   position: relative;
   background-image: url(/images/whiteItiha.png);
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
@@ -2544,6 +2544,10 @@ span.error {
         -ms-flex-align: center;
             align-items: center;
     padding: 0;
+  }
+  .about-title{
+    justify-content: center;
+    margin-left: 40px;
   }
 }
 
