@@ -7,10 +7,20 @@
         margin: 1em 0;
         color: SandyBrown;
         text-shadow: 0.02em 0.02em 0 Brown, 0 0 0.5em violet;
+        &.countdown-end {
+            font-size: 10vw;
+            @include media-breakpoint-down(sm) {
+                font-size: 5rem;
+            }
+        }
         & span {
             display: block;
             padding-top: 0.6em;
             padding-left: 0.5em;
+        }
+        &.countdown-end span {
+            padding: 0;
+            text-align: left;
         }
         @include media-breakpoint-down(sm) {
             font-size: 12vw;
